@@ -1,10 +1,12 @@
-const MapedCoins = ({ name, image, last24h, current_price }) => {
+import styles from '../../styles/MapedCoins.module.css'
+
+const MapedCoins = ({ name, last24h, current_price }) => {
     return (
         <div>
-            <div>
+            {/* <div>
                 <img src={image} alt={name} />
-            </div>
-            <div>
+            </div> */}
+            <div className={styles.coin_body}>
                 <span> {name} </span>
                 <span> {current_price} </span>
                 <span> {last24h} </span>
