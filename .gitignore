@@ -1,5 +1,8 @@
-# dependencies
+#ignore
 /node_modules
+/vscode
+
+# dependencies
 /.pnp
 .pnp.js
 
