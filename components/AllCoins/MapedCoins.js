@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import styles from '../../styles/MapedCoins.module.css'
 
 const MapedCoins = ({ name, last24h, current_price }) => {
