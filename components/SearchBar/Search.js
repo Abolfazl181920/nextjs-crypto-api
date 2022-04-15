@@ -1,7 +1,12 @@
-const Search = () => {
+const Search = ({ value, handlesearch }) => {
     return (
         <>
-            <input type='text' placeholder='search ...' />
+            <input
+                value={value}
+                onChange={handlesearch}
+                type='text'
+                placeholder='search ...'
+            />
         </>
     )
 }

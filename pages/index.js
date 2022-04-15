@@ -1,13 +1,26 @@
+import { useState } from 'react'
 import Search from '../components/SearchBar/Search'
 import Coins from '../components/AllCoins/Coins'
 
 export default function Home({ filteredCoins }) {
+
+  const [ search, setSearch ] = useState('')
+
+  const allCoins = filteredCoins.filter(coin =>
+    coin.name.toLowerCase().includes(search.toLowerCase())
+  )
+
+  const handleSearch = (e) => {
+    e.preventDefault()
+    setSearch(e.target.value.toLowerCase())
+  }
+
   return (
     <div>
-      <Search />
-      <Coins filteredCoins={filteredCoins} />
+      <Search value={search} handlesearch={handleSearch} />
+      <Coins filteredCoins={allCoins} />
     </div>
-  );
+  )
 }
 
 export const getServerSideProps = async () => {
