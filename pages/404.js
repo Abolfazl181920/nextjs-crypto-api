@@ -1,7 +1,12 @@
+import Link from 'next/link'
+
 const Error404 = () => {
     return (
         <div>
-            Error
+            Error: This Page Is Not Found!
+            <Link href='/'>
+                <button>Redirect HomePage</button>
+            </Link>
         </div>
     )
 }
