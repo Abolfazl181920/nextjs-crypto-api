@@ -1,11 +1,9 @@
+import Image from 'next/image'
 import styles from '../../styles/MapedCoins.module.css'
 
 const MapedCoins = ({ name, last24h, current_price }) => {
     return (
         <div>
-            {/* <div>
-                <img src={image} alt={name} />
-            </div> */}
             <div className={styles.coin_body}>
                 <span> {name} </span>
                 <span> {current_price} </span>
