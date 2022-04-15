@@ -6,6 +6,7 @@ const Coins = ({ filteredCoins }) => {
             {
                 filteredCoins.map((coin => (
                     <MapedCoins
+                        id={coin.id}
                         key={coin.id}
                         name={coin.name}
                         current_price={coin.current_price}
